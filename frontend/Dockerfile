@@ -4,8 +4,6 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . ./
-
-RUN chmod +x /path/to/your/script.sh
-
+RUN chmod +x node_modules/.bin/*
 RUN npm run build
 CMD cp -r build result_build
