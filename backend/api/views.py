@@ -1,19 +1,21 @@
 from collections import defaultdict
 
 from django.http import Http404, HttpResponse  # , JsonResponse
+# from .serializers import *
+from recipes.models import Subscriptions
 from rest_framework import generics
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-# from .serializers import *
-from recipes.models import Subscriptions
-from .serializers import RegistrationSerializer, LoginSerializer, \
-    UserSerializer, ChangePasswordSerializer, User, Tag, \
-    TagSerializer, Ingredient, IngredientSerializer, Recipe, ShoppingCart, \
-    ShoppingCartAndFavoritesSerializer, RecipeIngredient, Favorites, \
-    SubscriptionSerializer, RecipeSerializer, CreateRecipeSerializer
+from .serializers import (ChangePasswordSerializer, CreateRecipeSerializer,
+                          Favorites, Ingredient, IngredientSerializer,
+                          LoginSerializer, Recipe, RecipeIngredient,
+                          RecipeSerializer, RegistrationSerializer,
+                          ShoppingCart, ShoppingCartAndFavoritesSerializer,
+                          SubscriptionSerializer, Tag, TagSerializer, User,
+                          UserSerializer)
 
 
 class UsersDispatcherAPIView(APIView):
