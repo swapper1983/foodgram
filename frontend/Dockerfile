@@ -5,12 +5,12 @@ COPY package*.json ./
 # RUN npm cache clean --force
 # RUN rm -rf node_modules/
 
-ENV API_URL https://python.nomoredomainsrocks.ru
-RUN npm ci
-
 RUN rm -rf node_modules
 RUN rm -f package-lock.json
 RUN npm cache clean --force
+
+ENV API_URL https://python.nomoredomainsrocks.ru
+RUN npm ci
 
 RUN npm install
 COPY . ./
