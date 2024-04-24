@@ -5,5 +5,3 @@ from recipes.models import Ingredient
 class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         Ingredient.objects.all().delete()
-
-

@@ -24,6 +24,7 @@ class RecipeAdmin(admin.ModelAdmin):
         return Favorites.objects.filter(recipes=obj).count()
     favorites_count.short_description = 'Добавлений в избранное'
 
+
 @admin.register(Ingredient)
 class IngredientAdmin(admin.ModelAdmin):
     list_display = ('name', 'measurement_unit')
