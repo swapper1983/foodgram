@@ -13,8 +13,8 @@ RUN npm cache clean --force
 # ENV API_URL https://python.nomoredomainsrocks.ru
 # RUN npm ci
 
-# RUN npm install
-RUN npm install --save async-lib
+# RUN npm install  # ./lib/async" /lib/parse
+RUN npm install --save *-lib
 
 COPY . ./
 RUN chmod +x node_modules/.bin/*
