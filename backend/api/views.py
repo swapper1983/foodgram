@@ -1,10 +1,9 @@
 from collections import defaultdict
 
-from django.http import JsonResponse, Http404, HttpResponse
+from django.http import Http404, HttpResponse, JsonResponse
 from rest_framework import generics
-
 from rest_framework.pagination import PageNumberPagination
-from rest_framework.permissions import IsAuthenticated, AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 

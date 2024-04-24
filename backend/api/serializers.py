@@ -3,13 +3,13 @@ import base64
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from django.core.files.base import ContentFile
-from django.core.validators import MinValueValidator, MaxValueValidator
+from django.core.validators import MaxValueValidator, MinValueValidator
 from drf_extra_fields.fields import Base64ImageField
+from recipes.models import (Favorites, Ingredient, Recipe, RecipeIngredient,
+                            ShoppingCart, Subscriptions, Tag)
 from rest_framework import serializers
 from rest_framework.authtoken.models import Token
 from rest_framework.exceptions import PermissionDenied
-
-from recipes.models import Subscriptions, Tag, Recipe, Ingredient, RecipeIngredient, Favorites, ShoppingCart
 
 
 class UserSerializer(serializers.ModelSerializer):
