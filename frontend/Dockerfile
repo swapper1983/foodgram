@@ -1,6 +1,6 @@
 # build env
 # FROM node:13.12.0-alpine as build
-FROM node:18.18-alpine as build
+FROM node:10.5.2-alpine as build
 WORKDIR /app
 COPY package*.json ./
 # RUN npm cache clean --force
