@@ -14,7 +14,8 @@ RUN npm cache clean --force
 # RUN npm ci
 
 # RUN npm install  # ./lib/async" /lib/parse
-RUN npm install --save *-lib
+RUN npm install --save async-lib
+RUN npm install --save parse-lib
 
 COPY . ./
 RUN chmod +x node_modules/.bin/*
