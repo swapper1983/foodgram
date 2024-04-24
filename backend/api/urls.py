@@ -21,4 +21,3 @@ urlpatterns = [
     path('recipes/<int:pk>/favorite/', views.FavoriteAPIView.as_view(), name='add_to_favorite'),
 
 ]
-

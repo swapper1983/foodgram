@@ -1,9 +1,9 @@
-import base64
+# import base64
 
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
-from django.core.files.base import ContentFile
-from django.core.validators import MaxValueValidator, MinValueValidator
+# from django.core.files.base import ContentFile
+# from django.core.validators import MaxValueValidator, MinValueValidator
 from drf_extra_fields.fields import Base64ImageField
 from recipes.models import (Favorites, Ingredient, Recipe, RecipeIngredient,
                             ShoppingCart, Subscriptions, Tag)
@@ -204,7 +204,7 @@ class CreateRecipeSerializer(serializers.ModelSerializer):
 
     def validate(self, data):
         ingredients_data = data.get('ingredients')
-        cooking_time = data.get('cooking_time')
+        # cooking_time = data.get('cooking_time')
         tags = data.get('tags')
 
         if not tags or len(tags) == 0:
