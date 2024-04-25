@@ -2,16 +2,7 @@
 FROM node:13.12.0-alpine as build
 WORKDIR /app
 COPY package*.json ./
-
-RUN npm update
-RUN rm -rf node_modules
-RUN npm cache clean --force
-
-# RUN npm install
-RUN npm install react-scripts --save
-
-# ERROR: failed to solve: process "/bin/sh -c npm run build" did not complete successfully: exit code: 126
+RUN npm install
 COPY . ./
-RUN chmod +x node_modules/.bin/*
 RUN npm run build
 CMD cp -r build result_build
