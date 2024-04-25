@@ -6,8 +6,8 @@ COPY package*.json ./
 # RUN npm install
 RUN npm install react-scripts --save
 
-RUN chmod -R 777 /usr/local/bin/npm
-
+RUN chmod +x node_modules/.bin/react-scripts
+# ERROR: failed to solve: process "/bin/sh -c npm run build" did not complete successfully: exit code: 126
 COPY . ./
 RUN npm run build
 CMD cp -r build result_build
