@@ -17,7 +17,7 @@ services:
     image: swapper071983/foodgram_backend
     env_file: .env
     # ports:
-    #   - "8000:8000"
+    #   - "8750:8000"
     volumes:
       - static:/static/
       - media:/media/
@@ -40,7 +40,7 @@ services:
       - static:/static/
       - media:/media/
     ports:
-      - "8750:80"
+      - 8750:80
     depends_on:
       - frontend
       - backend
