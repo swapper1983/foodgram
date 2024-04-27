@@ -16,8 +16,8 @@ services:
   backend:
     image: swapper071983/foodgram_backend
     env_file: .env
-    ports:
-      - "8000:8000"
+    # ports:
+    #   - "8000:8000"
     volumes:
       - static:/static/
       - media:/media/
@@ -29,8 +29,8 @@ services:
     env_file: .env
     volumes:
       - ../frontend/:/app/result_build/
-  
-   
+
+
   nginx:
     image: swapper071983/foodgram_nginx 
     env_file: .env
