@@ -35,8 +35,8 @@ services:
     image: swapper071983/foodgram_nginx 
     env_file: .env
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf
-      - ../frontend/build:/usr/share/nginx/html/
+      # - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      # - ../frontend/build:/usr/share/nginx/html/
       - static:/static/
       - media:/media/
     ports:
